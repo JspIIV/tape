@@ -1,0 +1,11 @@
+{
+  "name": "tape",
+  "private": true,
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Tape: Internet Court rulings on whether an agent swap filled at the market price. The fill comes from the receipt, read from two RPCs; the market from the one-minute candles of OKX and Coinbase; the verdict is FAIR or OFF_MARKET",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/JspIIV/tape.git" },
+  "scripts": { "test": "python tests/tape_rules.py", "test:live": "python tests/tape_rules.py --live" },
+  "dependencies": { "genlayer-js": "2.0.0-rc.2" }
+}

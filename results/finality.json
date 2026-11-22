@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-11-22T16:25:49.257Z",
+  "contract": "0x76440888010A9d414011015de355D10C463A1EC9",
+  "source_sha256": "61c565191d76d5512e21541f5f2b10ea4aa4450d752da68e46350fab79cb9ae1",
+  "source_matches_chain": true,
+  "finalized": 9,
+  "accepted": 0,
+  "other": 0,
+  "total": 9
+}
