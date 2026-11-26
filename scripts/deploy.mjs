@@ -17,7 +17,7 @@ for (let i = 0; i < 90; i++) {
   if (['ACCEPTED', 'FINALIZED'].includes(tx.statusName)) {
     if (tx.txExecutionResultName !== 'FINISHED_WITH_RETURN') { console.error('deploy failed', tx.txExecutionResultName); process.exit(1); }
     const address = tx.txDataDecoded?.contractAddress || tx.recipient;
-    fs.writeFileSync(OUT, JSON.stringify({ network: 'genlayer testnet bradbury phase 2', address, tx: hash, deployer: w.address, deployed_at: new Date().toISOString(), explorer: EXPLORER + '/address/' + address }, null, 2));
+    fs.writeFileSync(OUT, JSON.stringify({ network: 'genlayer testnet bradbury phase 3', address, tx: hash, deployer: w.address, deployed_at: new Date().toISOString(), explorer: EXPLORER + '/address/' + address }, null, 2));
     console.log('Tape', address);
     process.exit(0);
   }

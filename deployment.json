@@ -1,8 +1,13 @@
 {
-  "network": "genlayer testnet bradbury phase 2",
-  "address": "0x76440888010A9d414011015de355D10C463A1EC9",
-  "tx": "0x4bf03da0e936ee2c5a359096a922fff5632b6a7d7ecdf3a3933fc759a12c4e53",
+  "network": "genlayer testnet bradbury phase 3",
+  "address": "0xF6e7dcce5B9A6B4e64b21C8B485070D23eEEade6",
+  "tx": "0x822e82d2e5794996465845481756c71f5f0fb853ca93a300132b32e831c895db",
   "deployer": "0xBdB591cDdd787956a4fB17a8f4C325366525EfD2",
-  "deployed_at": "2026-11-22T16:17:26.590Z",
-  "explorer": "https://scan.bradbury.genlayer.com/address/0x76440888010A9d414011015de355D10C463A1EC9"
+  "deployed_at": "2026-11-26T16:38:22.832Z",
+  "explorer": "https://scan.bradbury.genlayer.com/address/0xF6e7dcce5B9A6B4e64b21C8B485070D23eEEade6",
+  "previous": {
+    "network": "genlayer testnet bradbury phase 2",
+    "address": "0x76440888010A9d414011015de355D10C463A1EC9",
+    "why_replaced": "Bradbury moved to Phase 3 on 2026-11-25 and Phase 2 courts give no new rulings; deployed again with the same code, only the runner line changed"
+  }
 }

@@ -1,4 +1,4 @@
-// GenLayer Bradbury Phase 2, as the scripts reach it.
+// GenLayer Bradbury Phase 3, as the scripts reach it.
 //
 // RPC is a node that serves gen_call. The SDK's default chain RPC does not.
 // The SDK quotes fees with an eth_call that names a gas price but no sender, and the node refuses that
@@ -6,7 +6,8 @@
 import { createClient, createAccount } from 'genlayer-js';
 import { testnetBradbury } from 'genlayer-js/chains';
 
-export const RPC = 'https://rpc-bradbury.genlayer.com';
+export const RPC = 'https://rpc.bradbury.genlayer.com';
+export const CHAIN = 'https://rpc.testnet-chain.genlayer.com';
 export const EXPLORER = 'https://scan.bradbury.genlayer.com';
 
 let caller = null;
@@ -20,14 +21,18 @@ async function patient(url, init) {
     try {
       const res = await realFetch(url, init);
       const html = (res.headers.get('content-type') || '').includes('text/html');
-      if (sends || attempt >= 8 || (res.status < 500 && !html)) return res;
+      // A read the node refused as over its limit, or failed inside, was never answered: ask again.
+      const refused = !sends && res.status < 500 && !html && /rate limit|exceeds defined limit|"code":-32603/i.test(await res.clone().text());
+      if (sends || attempt >= 8 || (res.status < 500 && !html && !refused)) return res;
     } catch (e) {
       if (sends || attempt >= 8) throw e;
     }
     await sleep(Math.min(2000 * attempt, 15000));
   }
 }
+// The Phase 3 node answers reads only, so anything that sends goes to GenLayer Chain's own endpoint.
 globalThis.fetch = async (url, init) => {
+  if (String(url).startsWith(RPC) && init && typeof init.body === 'string' && /"eth_send/.test(init.body)) url = CHAIN;
   if (caller && init && typeof init.body === 'string' && init.body.includes('"eth_call"')) {
     const body = JSON.parse(init.body);
     for (const req of Array.isArray(body) ? body : [body]) {

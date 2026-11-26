@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-22T16:25:49.257Z",
-  "contract": "0x76440888010A9d414011015de355D10C463A1EC9",
-  "source_sha256": "61c565191d76d5512e21541f5f2b10ea4aa4450d752da68e46350fab79cb9ae1",
+  "checked_at": "2026-11-26T16:48:52.457Z",
+  "contract": "0xF6e7dcce5B9A6B4e64b21C8B485070D23eEEade6",
+  "source_sha256": "3818ec91f9ae66ba4f65c121c23e48a816619acefee2ba688b3d11c67b6724a2",
   "source_matches_chain": true,
-  "finalized": 9,
-  "accepted": 0,
+  "finalized": 0,
+  "accepted": 9,
   "other": 0,
   "total": 9
 }

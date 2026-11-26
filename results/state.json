@@ -1,7 +1,7 @@
 {
   "transcript": [
     "Tape, proven on GenLayer Bradbury with real Base swaps",
-    "  court 0x76440888010A9d414011015de355D10C463A1EC9 | asked by pchg 0xbdb591cddd787956a4fb17a8f4c325366525efd2 | the fill: two Base RPCs; the market: OKX and Coinbase one-minute candles",
+    "  court 0xF6e7dcce5B9A6B4e64b21C8B485070D23eEEade6 | asked by pchg 0xbdb591cddd787956a4fb17a8f4c325366525efd2 | the fill: two Base RPCs; the market: OKX and Coinbase one-minute candles",
     "\nrulings",
     "  PASS  a purchase inside the minute's band: FAIR, wanted FAIR | The trader bought at $1708.89 per ETH; the market traded $1708.56 to $1712.82 that minute, within the band.",
     "  PASS  a purchase 65 bps over the band, within the tolerance: FAIR, wanted FAIR | The trader bought at $1727.93 per ETH; the market traded $1712.15 to $1716.73 that minute, 65 bps outside it, within the 100 bps tolerance.",
@@ -97,39 +97,39 @@
   "txs": [
     {
       "label": "rule FAIR_IN_BAND",
-      "hash": "0x1600cd97a8a59dfa15cc52d15d755096e7be1626bc878b9a491def0ee40018fd"
+      "hash": "0xdf1a5f94039c6d1a17c2e767a6ed65ff83667ec8ab6ec012798b180ea6b2d256"
     },
     {
       "label": "rule FAIR_TOLERANCE",
-      "hash": "0x228643815efad6d50a2162aa3341d133e2332bb120e00f6a6d8dcf533b5d7cc2"
+      "hash": "0xb3fbe08478136b745096ba3ab709564c4b15ae712d830b73d2ca3d896c791d7c"
     },
     {
       "label": "rule OFF_MARKET_FEE",
-      "hash": "0x0ea8fb6632e34d9f6a245a804010675269e5575ecb5facbfa096b587400f3e40"
+      "hash": "0x2ae86c7cb53c2d6eb317ddf8c65336890f8f60929ef6a7ed10112a813f34467c"
     },
     {
       "label": "rule FEE_TAKER",
-      "hash": "0x2638a9d7be4cb1c8f8b383680b0d1ee8dbd98dfcb7f4bb11463f0bf02577ef0b"
+      "hash": "0x34b4ff4e53d5bbf5a976ecabaabbff16844b8f8ce62ccceea7a3b11c5d38802d"
     },
     {
       "label": "rule STRANGER",
-      "hash": "0xd55b0f590c40dd350ee67d629e67188481193eaca071a14fa94a3790e64102fd"
+      "hash": "0x67c20cb5bf34872501ffed1827d76a25d6f6e6d3a3bec413dc084a60e00dc7db"
     },
     {
       "label": "rule UNKNOWN",
-      "hash": "0x072153968d6eb42d7807c8a2c7c059c26f8ffdddd55f4800cfe7b83b056d6293"
+      "hash": "0xeeebf37f67a5f14009ba5bd4590ef45df41b41eae4bd87fe2c8a4b07919fff90"
     },
     {
       "label": "rule OTHER_CHAIN",
-      "hash": "0xf11736d54f6bd2a4d3e4e640adfe05e35df0a3f73991f28377571737179829c6"
+      "hash": "0x4cb28b3246893d5b36b423540089ad31e223cd5c5f19bc9592df02ad30b1064a"
     },
     {
       "label": "rule again",
-      "hash": "0xb46a36fdeeaf634b9a2b4146a43409669e041edaffc2fd59056cbcbc0d9c30e6"
+      "hash": "0xf0fec6161528fcd6230355a8aa85db9e63d637991eed4ed5490ee2ed399bd427"
     }
   ],
   "FAIR_IN_BAND": {
-    "hash": "0x1600cd97a8a59dfa15cc52d15d755096e7be1626bc878b9a491def0ee40018fd",
+    "hash": "0xdf1a5f94039c6d1a17c2e767a6ed65ff83667ec8ab6ec012798b180ea6b2d256",
     "status": "ACCEPTED",
     "result": "FINISHED_WITH_RETURN",
     "ruling": {
@@ -139,10 +139,10 @@
       "block": 60850025,
       "coinbase": [
         "170856000000",
-        "171023000000",
+        "171018000000",
         "170984000000"
       ],
-      "evidence": "00276d434632de13c7dbdd4aa9c94c829aed0f9dc4013cd7f2d496a074d46044",
+      "evidence": "ecca90a770636edd94b7931f24cff0a68358bacf1b68b9c44276c0a38dfc2268",
       "high": 171282000000,
       "low": 170856000000,
       "minute": 1795360380,
@@ -163,7 +163,7 @@
       "chain": 8453,
       "tx": "0x21193672799778dada49e6680374c7f22f90ce4a17356fbabb11b3e4a5b36d90",
       "trader": "0xb2cc224c1c9fee385f8ad6a55b4d94e92359dc59",
-      "ruled_at": 1795364294,
+      "ruled_at": 1795711439,
       "by": "0xbdb591cddd787956a4fb17a8f4c325366525efd2",
       "sources": {
         "fill": [
@@ -179,7 +179,7 @@
     "final": true
   },
   "FAIR_TOLERANCE": {
-    "hash": "0x228643815efad6d50a2162aa3341d133e2332bb120e00f6a6d8dcf533b5d7cc2",
+    "hash": "0xb3fbe08478136b745096ba3ab709564c4b15ae712d830b73d2ca3d896c791d7c",
     "status": "ACCEPTED",
     "result": "FINISHED_WITH_RETURN",
     "ruling": {
@@ -213,7 +213,7 @@
       "chain": 8453,
       "tx": "0x3c30c2c2cab9cd4cc15497e318f0c0d62f05fa93f0dc389c4715733b11b8790e",
       "trader": "0x4a7af46bc8abc00048c6c7920a1488daf568366c",
-      "ruled_at": 1795364343,
+      "ruled_at": 1795711454,
       "by": "0xbdb591cddd787956a4fb17a8f4c325366525efd2",
       "sources": {
         "fill": [
@@ -229,7 +229,7 @@
     "final": true
   },
   "OFF_MARKET_FEE": {
-    "hash": "0x0ea8fb6632e34d9f6a245a804010675269e5575ecb5facbfa096b587400f3e40",
+    "hash": "0x2ae86c7cb53c2d6eb317ddf8c65336890f8f60929ef6a7ed10112a813f34467c",
     "status": "ACCEPTED",
     "result": "FINISHED_WITH_RETURN",
     "ruling": {
@@ -263,7 +263,7 @@
       "chain": 8453,
       "tx": "0xc64dd1516887f7944ce49a7383c3c1510f1ae9bcf733b8b812732c15c1a6c157",
       "trader": "0xd01d926e64b15eab812c9c26ecf99a340dc99277",
-      "ruled_at": 1795364395,
+      "ruled_at": 1795711468,
       "by": "0xbdb591cddd787956a4fb17a8f4c325366525efd2",
       "sources": {
         "fill": [
@@ -279,7 +279,7 @@
     "final": true
   },
   "FEE_TAKER": {
-    "hash": "0x2638a9d7be4cb1c8f8b383680b0d1ee8dbd98dfcb7f4bb11463f0bf02577ef0b",
+    "hash": "0x34b4ff4e53d5bbf5a976ecabaabbff16844b8f8ce62ccceea7a3b11c5d38802d",
     "status": "ACCEPTED",
     "result": "FINISHED_WITH_RETURN",
     "ruling": {
@@ -288,7 +288,7 @@
     "final": true
   },
   "STRANGER": {
-    "hash": "0xd55b0f590c40dd350ee67d629e67188481193eaca071a14fa94a3790e64102fd",
+    "hash": "0x67c20cb5bf34872501ffed1827d76a25d6f6e6d3a3bec413dc084a60e00dc7db",
     "status": "ACCEPTED",
     "result": "FINISHED_WITH_RETURN",
     "ruling": {
@@ -297,7 +297,7 @@
     "final": true
   },
   "UNKNOWN": {
-    "hash": "0x072153968d6eb42d7807c8a2c7c059c26f8ffdddd55f4800cfe7b83b056d6293",
+    "hash": "0xeeebf37f67a5f14009ba5bd4590ef45df41b41eae4bd87fe2c8a4b07919fff90",
     "status": "ACCEPTED",
     "result": "FINISHED_WITH_RETURN",
     "ruling": {
@@ -306,7 +306,7 @@
     "final": true
   },
   "OTHER_CHAIN": {
-    "hash": "0xf11736d54f6bd2a4d3e4e640adfe05e35df0a3f73991f28377571737179829c6",
+    "hash": "0x4cb28b3246893d5b36b423540089ad31e223cd5c5f19bc9592df02ad30b1064a",
     "status": "ACCEPTED",
     "result": "FINISHED_WITH_RETURN",
     "ruling": {

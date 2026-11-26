@@ -5,13 +5,13 @@ description: Get an Internet Court ruling on whether an agent's on-chain swap fi
 
 # Tape: Internet Court fair-price rulings on swaps
 
-## Deployed on GenLayer Bradbury Phase 2
+## Deployed on GenLayer Bradbury Phase 3
 
 | Contract | Address | Source |
 |---|---|---|
-| Tape (Intelligent Contract, the court) | `0x76440888010A9d414011015de355D10C463A1EC9` | `contracts/tape.py` |
+| Tape (Intelligent Contract, the court) | `0xF6e7dcce5B9A6B4e64b21C8B485070D23eEEade6` | `contracts/tape.py` |
 
-RPC: `https://rpc-bradbury.genlayer.com`. Explorer: `https://scan.bradbury.genlayer.com`.
+RPC: `https://rpc.bradbury.genlayer.com` (genlayer-js 2.1.0; reads only, sends go to `https://rpc.testnet-chain.genlayer.com`). A ruling is final about half an hour after its round. Explorer: `https://scan.bradbury.genlayer.com`.
 
 ## What it can rule on
 

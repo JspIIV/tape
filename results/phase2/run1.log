@@ -1,0 +1,26 @@
+Tape, proven on GenLayer Bradbury with real Base swaps
+  court 0x76440888010A9d414011015de355D10C463A1EC9 | asked by pchg 0xbdb591cddd787956a4fb17a8f4c325366525efd2 | the fill: two Base RPCs; the market: OKX and Coinbase one-minute candles
+
+rulings
+  PASS  a purchase inside the minute's band: FAIR, wanted FAIR | The trader bought at $1708.89 per ETH; the market traded $1708.56 to $1712.82 that minute, within the band.
+  PASS  a purchase 65 bps over the band, within the tolerance: FAIR, wanted FAIR | The trader bought at $1727.93 per ETH; the market traded $1712.15 to $1716.73 that minute, 65 bps outside it, within the 100 bps tolerance.
+  PASS  a sale at the pool price, with 3% taken by a fee in the same transaction: OFF_MARKET, wanted OFF_MARKET | The trader sold at $1663.19 per ETH; the market traded $1714.56 to $1718.39 that minute, 299 bps below its low.
+
+no ruling where there is nothing to rule on
+  PASS  the fee taker in that transaction, who only received: not a swap: nothing stored | round ACCEPTED FINISHED_WITH_RETURN
+  PASS  an account the swap never touched: nothing stored | round ACCEPTED FINISHED_WITH_RETURN
+  PASS  a hash Base never saw: nothing stored | round ACCEPTED FINISHED_WITH_RETURN
+  PASS  a chain the court does not read: nothing stored | round ACCEPTED FINISHED_WITH_RETURN
+
+reads other contracts gate on
+  PASS  fair() is true for a FAIR fill
+  PASS  fair() is false for an OFF_MARKET fill
+  PASS  fair() is false for a fill never ruled
+  PASS  the off-market ruling records what the trader really got, both candles, the band and the miss | sold 14576283077104539 wei for 24243217 USDC units, band 171456000000..171839000000, miss 299 bps
+  PASS  the ruling carries an evidence digest anyone can recompute
+
+a final ruling is never changed
+  PASS  asking again about a ruled fill leaves the ruling as it was
+  PASS  the court lists exactly the three rulings | OFF_MARKET, FAIR, FAIR
+
+14/14 checks passed

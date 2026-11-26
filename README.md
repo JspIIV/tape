@@ -11,7 +11,10 @@ or a counterparty says "you were filled fairly", nothing on chain can settle it:
 minute lives on exchanges, not on the chain. Tape turns the exchanges' public record into a ruling other contracts
 can gate on: refund a user, slash an agent's bond, score an executor.
 
-- **The court (GenLayer Bradbury):** [`0x76440888010A9d414011015de355D10C463A1EC9`](https://scan.bradbury.genlayer.com/address/0x76440888010A9d414011015de355D10C463A1EC9)
+- **The court (GenLayer Bradbury):** [`0xF6e7dcce5B9A6B4e64b21C8B485070D23eEEade6`](https://scan.bradbury.genlayer.com/address/0xF6e7dcce5B9A6B4e64b21C8B485070D23eEEade6)
+- **Moved to Bradbury Phase 3 on 2026-11-26.** GenLayer moved its testnet to Phase 3 on 2026-11-25, and courts on Phase 2
+  can no longer give new rulings. The court was deployed again with the same code (only the runner line changed) and
+  proven again. The Phase 2 address is kept in `deployment.json` (`previous`), its proof in `results/phase2/`.
 - **Skill:** [`SKILL.md`](SKILL.md)
 
 ```text
@@ -73,14 +76,14 @@ is two tokens.
 
 | Case | Swap (Base) | Court (Bradbury) | Verdict |
 |---|---|---|---|
-| a purchase inside the minute's band | [`0x21193672`](https://basescan.org/tx/0x21193672799778dada49e6680374c7f22f90ce4a17356fbabb11b3e4a5b36d90) | [`0x1600cd97`](https://scan.bradbury.genlayer.com/tx/0x1600cd97a8a59dfa15cc52d15d755096e7be1626bc878b9a491def0ee40018fd) | **FAIR**: bought at $1708.89, the market traded $1708.56 to $1712.82 |
-| a purchase over the band, within the tolerance | [`0x3c30c2c2`](https://basescan.org/tx/0x3c30c2c2cab9cd4cc15497e318f0c0d62f05fa93f0dc389c4715733b11b8790e) | [`0x22864381`](https://scan.bradbury.genlayer.com/tx/0x228643815efad6d50a2162aa3341d133e2332bb120e00f6a6d8dcf533b5d7cc2) | **FAIR**: bought at $1727.93, 65 bps over $1712.15 to $1716.73 |
-| a sale at the pool's price, with a fee taken in the same transaction | [`0xc64dd151`](https://basescan.org/tx/0xc64dd1516887f7944ce49a7383c3c1510f1ae9bcf733b8b812732c15c1a6c157) | [`0x0ea8fb66`](https://scan.bradbury.genlayer.com/tx/0x0ea8fb6632e34d9f6a245a804010675269e5575ecb5facbfa096b587400f3e40) | **OFF_MARKET**: 0.01458 ETH sold for 24.99 USDC, 0.74 USDC of it taken by a fee: net $1663.19, 299 bps under the $1714.56 low |
-| the fee taker in that transaction, who only received | same | [`0x2638a9d7`](https://scan.bradbury.genlayer.com/tx/0x2638a9d7be4cb1c8f8b383680b0d1ee8dbd98dfcb7f4bb11463f0bf02577ef0b) | nothing stored |
-| an account the swap never touched | same | [`0xd55b0f59`](https://scan.bradbury.genlayer.com/tx/0xd55b0f590c40dd350ee67d629e67188481193eaca071a14fa94a3790e64102fd) | nothing stored |
-| a hash Base never saw | | [`0x07215396`](https://scan.bradbury.genlayer.com/tx/0x072153968d6eb42d7807c8a2c7c059c26f8ffdddd55f4800cfe7b83b056d6293) | nothing stored |
-| a chain the court does not read | | [`0xf11736d5`](https://scan.bradbury.genlayer.com/tx/0xf11736d54f6bd2a4d3e4e640adfe05e35df0a3f73991f28377571737179829c6) | nothing stored |
-| asking again about a ruled fill | | [`0xb46a36fd`](https://scan.bradbury.genlayer.com/tx/0xb46a36fdeeaf634b9a2b4146a43409669e041edaffc2fd59056cbcbc0d9c30e6) | the ruling stays as it was |
+| a purchase inside the minute's band | [`0x21193672`](https://basescan.org/tx/0x21193672799778dada49e6680374c7f22f90ce4a17356fbabb11b3e4a5b36d90) | [`0xdf1a5f94`](https://scan.bradbury.genlayer.com/tx/0xdf1a5f94039c6d1a17c2e767a6ed65ff83667ec8ab6ec012798b180ea6b2d256) | **FAIR**: bought at $1708.89, the market traded $1708.56 to $1712.82 |
+| a purchase over the band, within the tolerance | [`0x3c30c2c2`](https://basescan.org/tx/0x3c30c2c2cab9cd4cc15497e318f0c0d62f05fa93f0dc389c4715733b11b8790e) | [`0xb3fbe084`](https://scan.bradbury.genlayer.com/tx/0xb3fbe08478136b745096ba3ab709564c4b15ae712d830b73d2ca3d896c791d7c) | **FAIR**: bought at $1727.93, 65 bps over $1712.15 to $1716.73 |
+| a sale at the pool's price, with a fee taken in the same transaction | [`0xc64dd151`](https://basescan.org/tx/0xc64dd1516887f7944ce49a7383c3c1510f1ae9bcf733b8b812732c15c1a6c157) | [`0x2ae86c7c`](https://scan.bradbury.genlayer.com/tx/0x2ae86c7cb53c2d6eb317ddf8c65336890f8f60929ef6a7ed10112a813f34467c) | **OFF_MARKET**: 0.01458 ETH sold for 24.99 USDC, 0.74 USDC of it taken by a fee: net $1663.19, 299 bps under the $1714.56 low |
+| the fee taker in that transaction, who only received | same | [`0x34b4ff4e`](https://scan.bradbury.genlayer.com/tx/0x34b4ff4e53d5bbf5a976ecabaabbff16844b8f8ce62ccceea7a3b11c5d38802d) | nothing stored |
+| an account the swap never touched | same | [`0x67c20cb5`](https://scan.bradbury.genlayer.com/tx/0x67c20cb5bf34872501ffed1827d76a25d6f6e6d3a3bec413dc084a60e00dc7db) | nothing stored |
+| a hash Base never saw | | [`0xeeebf37f`](https://scan.bradbury.genlayer.com/tx/0xeeebf37f67a5f14009ba5bd4590ef45df41b41eae4bd87fe2c8a4b07919fff90) | nothing stored |
+| a chain the court does not read | | [`0x4cb28b32`](https://scan.bradbury.genlayer.com/tx/0x4cb28b3246893d5b36b423540089ad31e223cd5c5f19bc9592df02ad30b1064a) | nothing stored |
+| asking again about a ruled fill | | [`0xf0fec616`](https://scan.bradbury.genlayer.com/tx/0xf0fec6161528fcd6230355a8aa85db9e63d637991eed4ed5490ee2ed399bd427) | the ruling stays as it was |
 
 Around them: `fair()` is true for a FAIR fill and false for the OFF_MARKET one and for one never ruled; the
 off-market ruling records the net amounts, both venues' candles, the band and the miss; it carries an evidence digest;
